@@ -222,7 +222,7 @@ def html_summary(state_slug: str, summary: IterationSummary):
 
     if (summary.leading_candidate_partition):
         html += f'''
-            <td>
+            <td class="{summary.leading_candidate_name}-block" style="background: linear-gradient(to right, var(--leading-candidate) {summary.leading_candidate_partition:5.01%}, var(--trailing-candidate) {summary.leading_candidate_partition:5.01%});">
                 {summary.leading_candidate_name} {summary.leading_candidate_partition:5.01%} /
                 {summary.trailing_candidate_partition:5.01%} {summary.trailing_candidate_name}
             </td>
